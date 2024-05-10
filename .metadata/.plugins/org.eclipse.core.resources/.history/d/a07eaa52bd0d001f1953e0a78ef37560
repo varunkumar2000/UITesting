@@ -1,0 +1,22 @@
+package ResolutionTesting;
+
+	import org.openqa.selenium.WebDriver;
+		import org.openqa.selenium.chrome.ChromeDriver;
+		import org.openqa.selenium.chrome.ChromeOptions;
+
+		public class mobile {
+		    public static void main(String[] args) {
+		        
+		        ChromeOptions options = new ChromeOptions();
+		        options.addArguments("window-size=414,896"); // Set mobile resolution to 360x640
+
+		        WebDriver driver = new ChromeDriver(options);
+		        driver.get("https://www.getcalley.com/best-auto-dialer-app/");
+		        // Perform actions on the webpage
+		      //  driver.quit();
+		    }
+		
+
+	}
+
+

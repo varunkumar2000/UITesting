@@ -1,0 +1,39 @@
+package ResolutionTesting;
+
+import java.io.IOException;
+
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.Test;
+
+public class Chrome {
+	 WebDriver driver;
+	   @Test
+	    public void ChromeDriver() throws IOException {
+		   driver = new ChromeDriver();	  
+		  driver.manage().window().maximize();
+		   driver.get("https://www.getcalley.com/"); 
+		    driver.manage().window().setSize(new Dimension(1920, 1080));
+		  
+	   }
+
+	   @Test
+	   public void EdgeTest() {
+		   driver = new EdgeDriver();	  
+		  driver.manage().window().maximize();
+	   driver.get("https://www.getcalley.com/"); 
+		   driver.manage().window().setSize(new Dimension(1920, 1080));
+	   }
+	   @Test
+	   public void Safari() {
+		   driver = new SafariDriver();	  
+		  driver.manage().window().maximize();
+	   driver.get("https://www.getcalley.com/"); 
+		   driver.manage().window().setSize(new Dimension(1920, 1080));
+	   }
+	   
+	   
+	 }

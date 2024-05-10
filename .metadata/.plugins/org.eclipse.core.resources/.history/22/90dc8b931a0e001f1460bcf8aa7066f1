@@ -1,0 +1,45 @@
+package Loginpage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Login {
+    public static void main(String[] args) {
+        // Set up the Chrome driver
+        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+        WebDriver driver = new ChromeDriver();
+
+        // Navigate to the page
+        driver.get("https://demo.dealsdray.com/");
+
+        // Click on the "Upload" button
+        WebElement uploadButton = driver.findElement(By.xpath("//a[@href='#']//span[contains(text(), 'Upload')]"));
+        uploadButton.click();
+
+        // Wait for the file input element to be visible
+       
+        FluentWait<WebDriver> wait = null;
+		WebElement fileInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("file-upload")));
+
+        // Upload the file
+        fileInput.sendKeys("/path/to/file.txt");
+
+        // Wait for the file to be uploaded
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("file-name"), "file.txt"));
+
+        // Close the browser
+        driver.quit();
+    }
+}

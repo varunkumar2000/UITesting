@@ -1,0 +1,38 @@
+package ResolutionTesting;
+
+import java.util.Optional;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.HasDevTools;
+import org.openqa.selenium.devtools.v85.emulation.Emulation;
+
+
+public class mobile {
+		    public static void main(String[] args) {
+		    	 WebDriver driver=new ChromeDriver();
+		       //  driver.manage().window().maximize();
+		         
+		         DevTools devTools = ((HasDevTools) driver).getDevTools();
+		         devTools.createSession();
+		         devTools.send(Emulation.setDeviceMetricsOverride(390,
+		        		 844, 
+		        		 100,
+		        		 true, 
+		        		 Optional.empty(),
+		        		 Optional.empty(), 
+		        		 Optional.empty(),
+		        		 Optional.empty(),
+		        		 Optional.empty(),
+		        		 Optional.empty(),
+		        		 Optional.empty(),
+		        		 Optional.empty()));
+		         
+		         driver.get("https://www.getcalley.com/");
+		    }
+		
+
+	}
+
+

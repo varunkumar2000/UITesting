@@ -1,0 +1,144 @@
+package ResolutionBrowserTesting;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+//import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.Test;
+
+public class Link1allBrowser {
+	 WebDriver driver;
+	  @SuppressWarnings("deprecation")
+	@Test(priority=1)
+	    public void ChromeDriver() throws IOException {
+		   driver = new ChromeDriver();	  
+		  driver.manage().window().maximize();
+		   driver.get("https://www.getcalley.com/"); 
+		    driver.manage().window().setSize(new Dimension(1920, 1080));
+		    TakesScreenshot TS=(TakesScreenshot)driver;
+			File Chromebrowser=TS.getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(Chromebrowser,new File("C:\\Users\\Varun Kumar\\eclipse-workspace\\UITesting\\ChromeBrowser\\1920,1080\\"+timetamp()+"link1.png"));
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.quit();
+			
+	   }  
+	   	private String timetamp() {
+		// TODO Auto-generated method stub
+		return new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
+		
+	   	}    
+	   
+	   	
+    @SuppressWarnings("deprecation")
+	@Test(priority=2)
+	   public void EdgeTest() throws IOException {
+		   driver = new EdgeDriver();	  
+		  driver.manage().window().maximize();
+	   driver.get("https://www.getcalley.com/"); 
+		   driver.manage().window().setSize(new Dimension(1920, 1080));
+		   TakesScreenshot TS=(TakesScreenshot)driver;
+			File Edgebrowser=TS.getScreenshotAs(OutputType.FILE);
+			
+			FileUtils.copyFile(Edgebrowser,new File("C:\\Users\\Varun Kumar\\eclipse-workspace\\UITesting\\EdgeBrowser\\1920,1080\\"+timetamp1()+"link1.png"));
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.quit();
+		   }  
+		   	private String timetamp1() {
+			// TODO Auto-generated method stub
+			return new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
+		}   
+	
+	    
+	    
+	  /* @Test(priority=3)
+	   public void Safari() {
+		   driver = new SafariDriver();	  
+		  driver.manage().window().maximize();
+	   driver.get("https://www.getcalley.com/"); 
+		   driver.manage().window().setSize(new Dimension(1920, 1080));
+	   } 
+	   */
+		   @SuppressWarnings("deprecation")
+		@Test(priority=4)
+		    public void ChromeDriver2() throws IOException {
+			   driver = new ChromeDriver();	  
+			  driver.manage().window().maximize();
+			   driver.get("https://www.getcalley.com/"); 
+			    driver.manage().window().setSize(new Dimension(1366, 768));
+			    TakesScreenshot TS=(TakesScreenshot)driver;
+				File Chromebrowser2=TS.getScreenshotAs(OutputType.FILE);
+				FileUtils.copyFile(Chromebrowser2,new File("C:\\Users\\Varun Kumar\\eclipse-workspace\\UITesting\\ChromeBrowser\\1366,768\\"+timetamp2()+"link1.png"));
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				driver.quit();
+				}  
+		   	private String timetamp2() {
+			// TODO Auto-generated method stub
+			return new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
+		}       
+
+		   @SuppressWarnings("deprecation")
+		@Test(priority=5)
+		   public void EdgeTest2() throws IOException {
+			   driver = new EdgeDriver();	  
+			  driver.manage().window().maximize();
+		   driver.get("https://www.getcalley.com/"); 
+			   driver.manage().window().setSize(new Dimension(1366, 768));
+			   TakesScreenshot TS=(TakesScreenshot)driver;
+				File Edgebrowser3=TS.getScreenshotAs(OutputType.FILE);
+				FileUtils.copyFile(Edgebrowser3,new File("C:\\Users\\Varun Kumar\\eclipse-workspace\\UITesting\\EdgeBrowser\\1366,768\\"+timetamp3()+"link1.png"));
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				driver.quit();
+				}  
+		   	private String timetamp3() {
+			// TODO Auto-generated method stub
+			return new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
+		}     		   
+	   
+             @SuppressWarnings("deprecation")
+			@Test(priority=6)
+            public void ChromeDriver3() throws IOException {
+            driver = new ChromeDriver();	  
+            driver.manage().window().maximize();
+            driver.get("https://www.getcalley.com/"); 
+            driver.manage().window().setSize(new Dimension(1536, 864));
+            TakesScreenshot TS=(TakesScreenshot)driver;
+			File Chromebrowser31=TS.getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(Chromebrowser31,new File("C:\\Users\\Varun Kumar\\eclipse-workspace\\UITesting\\ChromeBrowser\\1536,864\\"+timetamp4()+"link1.png"));
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.quit();
+			}  
+	   	private String timetamp4() {
+		// TODO Auto-generated method stub
+		return new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
+	}     	
+ 
+           @SuppressWarnings("deprecation")
+		@Test(priority=7)
+           public void EdgeTest3() throws IOException {
+           driver = new EdgeDriver();	  
+           driver.manage().window().maximize();
+           driver.get("https://www.getcalley.com/"); 
+           driver.manage().window().setSize(new Dimension(1536,864));
+           TakesScreenshot TS=(TakesScreenshot)driver;
+			File Edgebrowser5=TS.getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(Edgebrowser5,new File("C:\\Users\\Varun Kumar\\eclipse-workspace\\UITesting\\EdgeBrowser\\1536,864\\"+timetamp5()+"link1.png"));
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.quit();
+			}  
+		   	private String timetamp5() {
+			// TODO Auto-generated method stub
+			return new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
+		}     	
+}
+	   
+	 
